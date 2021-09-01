@@ -3,25 +3,29 @@ package LinkedLists;
 public class AppDemo {
 
 	public static void main(String[] args) {
+		/*
+		 * LinkedList list = new LinkedList(); // LinkedList list2 =new LinkedList();
+		 * list.insert(1); list.insert(2); list.insert(4); list.insert(6);
+		 * 
+		 * list.insert(3); list.insert(5); list.insert(7);
+		 * 
+		 * list.display(); System.out.println();
+		 * 
+		 * 
+		 * //list.head = list.mergeSortedList(list.head, list2.head);
+		 * list.findNthNode(1); list.findNthNode(3); list.findNthNode(7);
+		 * 
+		 * list.findNthNodeRec(list.head, 3);
+		 */
 		
-		  LinkedList list = new LinkedList(); 
-		  LinkedList list2 =new LinkedList();
-		  list.insert(1); 
-		  list.insert(2);
-		  list.insert(4); 
-		  list.insert(6);
+		RandomLinkedList list = new RandomLinkedList();
+		list.init();
+		list.display();
+		
+		RandomLinkedList list2 = new RandomLinkedList();
+		list2.head = list.clone();
+		list2.display();
 		  
-		  list2.insert(3); 
-		  list2.insert(5); 
-		  list2.insert(7); 
-		  
-		  list.display();
-		  System.out.println();
-		  list2.display();
-		  
-		  //list.head = list.mergeSortedList(list.head, list2.head);
-		  
-		  list.display();
 		 
 		
 		/*
