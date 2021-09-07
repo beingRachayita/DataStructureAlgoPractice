@@ -5,10 +5,16 @@ public class CelebrityProblem {
 	public static void main(String[] args) {
 		int[][] matrix={{0,0,1,0},
 						{0,0,1,0},
-						{0,1,0,0},
+						{0,0,0,0},
 						{0,0,1,0},
 						};
 
+		checkCelebrity(matrix);
+		getCelebrity(matrix);
+	}
+	
+	
+	public static void checkCelebrity(int[][] matrix){
 		int count =0; 
 		int i =0,j=0;
 		boolean flag = false;
@@ -40,4 +46,32 @@ public class CelebrityProblem {
 		}
 	}
 
+	
+	public static void getCelebrity(int[][] matrix){
+		int x =0;
+		int y = matrix[0].length-1;
+		while(x<y){
+			if(matrix[x][y]==1){
+				x++;
+			}else{
+				y--;
+			}
+		}
+		
+		y=0;
+		boolean flag = false;
+		while(y<matrix[0].length){
+			if(matrix[x][y]==1){
+				flag = true;
+				break;
+			}
+			y++;
+		}
+		
+		if(flag){
+			System.out.println("No Celebrity");
+		}else{
+			System.out.println("Celebrity is: "+ x);
+		}
+	}
 }
