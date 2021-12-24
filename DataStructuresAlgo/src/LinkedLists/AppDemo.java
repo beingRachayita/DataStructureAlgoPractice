@@ -18,16 +18,24 @@ public class AppDemo {
 		 * list.findNthNodeRec(list.head, 3);
 		 */
 		
-		RandomLinkedList list = new RandomLinkedList();
-		list.init();
-		list.display();
-		
-		RandomLinkedList list2 = new RandomLinkedList();
-		list2.head = list.clone();
-		list2.display();
-		  
+		/*
+		 * RandomLinkedList list = new RandomLinkedList(); list.init(); list.display();
+		 * 
+		 * RandomLinkedList list2 = new RandomLinkedList(); list2.head = list.clone();
+		 * list2.display();
+		 */
 		 
-		
+	LinkedList list = new LinkedList();
+	list.insert(1);
+	list.insert(2);
+	list.insert(3);
+	list.insert(5);
+	list.insert(1);
+	list.insert(2);
+	list.insert(1);
+		 
+		//list.display();
+		list.printTail();
 		/*
 		 * DoubleLinkedList dlist = new DoubleLinkedList(); dlist.insert(1);
 		 * dlist.insert(2); dlist.insert(3); dlist.insert(4); dlist.insert(5);

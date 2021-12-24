@@ -9,16 +9,14 @@ public class AppDemo {
 		bt.root = bt.create();
 		
 		bt.inorder(bt.root);
-		
-		bt.convert(bt.root);
-		
-		System.out.println();
-		
-		while(bt.head!=null){
-			System.out.print(bt.head.getData()+" ");
-			bt.head = bt.head.right;
-		}
-
+		/*
+		 * bt.convert(bt.root);
+		 * 
+		 * System.out.println();
+		 * 
+		 * while(bt.head!=null){ System.out.print(bt.head.getData()+" "); bt.head =
+		 * bt.head.right; }
+		 */
 	}
 
 }

@@ -244,4 +244,70 @@ public class LinkedList {
 		
 		return middle;
 	}
+	
+	public void findNthNode(int n) {
+		Node first =head;
+		Node second = head;
+		
+		if(head == null) {
+			System.out.println("List is empty");
+		}else {
+			while(n!=0 && first!=null) {
+				first = first.next;
+				n--;
+			}
+			
+			while(first!=null) {
+				second = second.next;
+				first = first.next;
+			}
+			
+			System.out.println("the node at Nth position is :"+ second.data);
+		}
+	}
+	
+	int flag=0;
+	public void findNthNodeRec(Node node,int n) {
+		if(node == null) {
+			return;
+		}
+		findNthNodeRec(node.next, n);
+		flag++;
+		if(n==flag) {
+			System.out.println(node.data);
+		}
+		
+	}
+	
+	public void printTail() {
+		Node temp = null;
+		Node tail = null;
+		int sum=0, max =0;
+		while(head.next!=null) {
+			sum =0;
+			sum+=head.data;
+			temp = head;
+			while(temp.next!=null) {
+				tail = temp;
+				temp = temp.next;
+			}
+			sum+=temp.data;
+			
+			System.out.println("Sum: "+ sum);
+			tail.next = null;
+			head = head.next;
+			
+			if(max<sum) {
+				max = sum;
+			}
+		}
+		
+		if(head!=null && head.data>max) {
+			max = head.data;
+		}
+		
+		System.out.println("Max: "+ max);
+		
+		
+	}
 }
