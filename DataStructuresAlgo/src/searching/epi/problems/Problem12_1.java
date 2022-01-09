@@ -1,7 +1,5 @@
 package searching.epi.problems;
 
-import java.util.Arrays;
-
 public class Problem12_1 {
 
 	/**
